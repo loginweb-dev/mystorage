@@ -10,6 +10,8 @@ class SettingsTableSeeder extends Seeder
      */
     public function run()
     {
+        //------------------SITE -----------------------------------------------
+        $count=1;
         $setting = $this->findSetting('site.title');
         if (!$setting->exists) {
             $setting->fill([
@@ -17,7 +19,7 @@ class SettingsTableSeeder extends Seeder
                 'value'        => __('voyager::seeders.settings.site.title'),
                 'details'      => '',
                 'type'         => 'text',
-                'order'        => 1,
+                'order'        => $count++,
                 'group'        => 'Site',
             ])->save();
         }
@@ -29,7 +31,7 @@ class SettingsTableSeeder extends Seeder
                 'value'        => __('voyager::seeders.settings.site.description'),
                 'details'      => '',
                 'type'         => 'text',
-                'order'        => 2,
+                'order'        => $count++,
                 'group'        => 'Site',
             ])->save();
         }
@@ -41,7 +43,7 @@ class SettingsTableSeeder extends Seeder
                 'value'        => '',
                 'details'      => '',
                 'type'         => 'image',
-                'order'        => 3,
+                'order'        => $count++,
                 'group'        => 'Site',
             ])->save();
         }
@@ -53,8 +55,46 @@ class SettingsTableSeeder extends Seeder
                 'value'        => '',
                 'details'      => '',
                 'type'         => 'text',
-                'order'        => 4,
+                'order'        => $count++,
                 'group'        => 'Site',
+            ])->save();
+        }
+
+        $setting = $this->findSetting('site.page');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => 'Pagina',
+                'value'        => 'landingpage-mystorage',
+                'details'      => '',
+                'type'         => 'text',
+                'order'        => $count++,
+                'group'        => 'Site',
+            ])->save();
+        }
+
+        //----------------ADMIN ---------------------------------
+        $count=1;
+        $setting = $this->findSetting('admin.title');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => __('voyager::seeders.settings.admin.title'),
+                'value'        => 'MyStorage',
+                'details'      => '',
+                'type'         => 'text',
+                'order'        => $count++,
+                'group'        => 'Admin',
+            ])->save();
+        }
+
+        $setting = $this->findSetting('admin.description');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => __('voyager::seeders.settings.admin.description'),
+                'value'        => 'Clone Google Drive o DropBox',
+                'details'      => '',
+                'type'         => 'text',
+                'order'        => $count++,
+                'group'        => 'Admin',
             ])->save();
         }
 
@@ -65,35 +105,11 @@ class SettingsTableSeeder extends Seeder
                 'value'        => '',
                 'details'      => '',
                 'type'         => 'image',
-                'order'        => 5,
+                'order'        => $count++,
                 'group'        => 'Admin',
             ])->save();
         }
-
-        $setting = $this->findSetting('admin.title');
-        if (!$setting->exists) {
-            $setting->fill([
-                'display_name' => __('voyager::seeders.settings.admin.title'),
-                'value'        => 'Voyager',
-                'details'      => '',
-                'type'         => 'text',
-                'order'        => 1,
-                'group'        => 'Admin',
-            ])->save();
-        }
-
-        $setting = $this->findSetting('admin.description');
-        if (!$setting->exists) {
-            $setting->fill([
-                'display_name' => __('voyager::seeders.settings.admin.description'),
-                'value'        => __('voyager::seeders.settings.admin.description_value'),
-                'details'      => '',
-                'type'         => 'text',
-                'order'        => 2,
-                'group'        => 'Admin',
-            ])->save();
-        }
-
+        
         $setting = $this->findSetting('admin.loader');
         if (!$setting->exists) {
             $setting->fill([
@@ -101,7 +117,7 @@ class SettingsTableSeeder extends Seeder
                 'value'        => '',
                 'details'      => '',
                 'type'         => 'image',
-                'order'        => 3,
+                'order'        => $count++,
                 'group'        => 'Admin',
             ])->save();
         }
@@ -113,7 +129,7 @@ class SettingsTableSeeder extends Seeder
                 'value'        => '',
                 'details'      => '',
                 'type'         => 'image',
-                'order'        => 4,
+                'order'        => $count++,
                 'group'        => 'Admin',
             ])->save();
         }
@@ -125,7 +141,7 @@ class SettingsTableSeeder extends Seeder
                 'value'        => '',
                 'details'      => '',
                 'type'         => 'text',
-                'order'        => 1,
+                'order'        => $count++,
                 'group'        => 'Admin',
             ])->save();
         }
