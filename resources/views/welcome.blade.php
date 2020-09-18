@@ -5,12 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Material Design Bootstrap</title>
-  <!-- Font Awesome -->
+  <title>{{ config('app.name') }}</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <!-- Bootstrap core CSS -->
   <link href="vendor/mdb/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
   <link href="vendor/mdb/css/mdb.min.css" rel="stylesheet">
   <style type="text/css">
     html,
@@ -51,21 +48,21 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
       <div class="container">
-        <a class="navbar-brand" href="#"><strong>MDB</strong></a>
+        <a class="navbar-brand" href="#"><strong>MyStorage</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
           aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            {{-- <li class="nav-item active">
+              <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
-            </li>
+            </li> --}}
             <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
+              <a class="nav-link" href="home">Profile</a>
             </li>
           </ul>
           <ul class="navbar-nav ml-auto nav-flex-icons">
@@ -867,16 +864,10 @@
   <!-- SCRIPTS -->
 
   <!-- JQuery -->
-  <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
-
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="../js/popper.min.js"></script>
-
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="../js/mdb.min.js"></script>
+  <script type="text/javascript" src="vendor/mdb/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="vendor/mdb/js/popper.min.js"></script>
+  <script type="text/javascript" src="vendor/mdb/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="vendor/mdb/js/mdb.min.js"></script>
 
   <script>
     //Animation init
