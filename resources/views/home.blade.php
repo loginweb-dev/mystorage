@@ -39,7 +39,9 @@
     <body>
         <div style="height: 600px;">
             <div id="fm"></div>
+            
         </div>
+        {{ Auth::user()->name }}
         <script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
     </body>
 </html>
